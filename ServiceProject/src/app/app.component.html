@@ -1,0 +1,20 @@
+<form id="dataForm" (ngSubmit)="submitCalled()">
+  <label for="firstdt">first:</label>
+  <input type="date" id="firstdt" name="firstdt" [(ngModel)]="first">
+  <label for="secdt">second:</label>
+  <input type="date" id="secdt" name="secdt" [(ngModel)]="second">
+  <input type="submit" value="Submit" id="dateSubmit">
+</form>
+<div id="dateResultContainer">
+  calculate days:{{days}}<br>
+  calculate months:{{months}}<br>
+  date comparision:{{same}}<br>
+  date formatting in UTC:{{formatedDate | json}}<br>
+</div>
+<div id="arrayResultContainer">
+  OriginalArray:{{sample}}<br>
+  ReverseArray:{{reverseArray}}<br>
+  Array Null or Empty:{{empty}}<br>
+  Array Sort:{{sorted}}<br>
+  value 5 exists in an array:{{exists}}
+</div>

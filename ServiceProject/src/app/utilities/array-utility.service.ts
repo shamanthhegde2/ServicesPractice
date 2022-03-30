@@ -6,16 +6,18 @@ import { Injectable } from '@angular/core';
 export class ArrayUtilityService {
   constructor() {}
 
-  reverse(arr: number[]) {
-    return arr.reverse();
-  }
   empty(arr: number[]) {
     return arr.length == 0;
   }
   sort(arr: number[]) {
-    return arr.sort();
+    const newArr = [...arr];
+    return newArr.sort();
   }
   exists(arr: number[], value: number) {
     return arr.includes(value);
+  }
+  reverse(arr: number[]) {
+    const newArr = [...arr];
+    return newArr.reverse();
   }
 }
